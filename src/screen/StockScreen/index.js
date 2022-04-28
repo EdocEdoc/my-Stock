@@ -59,9 +59,6 @@ const StockScreen = () => {
       .then((json) => {
         if (json.length > 0) {
           var temp = data;
-          if (temp.length > 1000) {
-            temp.pop();
-          }
           var now = new Date().toLocaleString();
           var toAdd = { date: now, data: json };
           setData((temp) => [...temp, toAdd]);
